@@ -1,0 +1,97 @@
+[
+  {
+    "model": "profile_company.sitedatasingleton",
+    "pk": 1,
+    "fields": {
+      "about": "We empower your business with intelligent solutions that help you dominate your market.",
+      "contact_email": "contact@peak-byte.com",
+      "contact_phone": "+967 730 050 303",
+      "address": "Sana'a, Yemen",
+      "stat_projects": 48,
+      "stat_clients": 22,
+      "stat_years": 7,
+      "stat_awards": 5
+    }
+  },
+  {
+    "model": "profile_company.service",
+    "fields": {
+      "name": "Custom Software",
+      "description": "Tailored apps and platforms to solve your unique business challenges.",
+      "icon": "fas fa-cogs"
+    }
+  },
+  {
+    "model": "profile_company.service",
+    "fields": {
+      "name": "Web & Mobile Apps",
+      "description": "Modern, user-friendly apps designed for performance and scalability.",
+      "icon": "fas fa-mobile-alt"
+    }
+  },
+  {
+    "model": "profile_company.service",
+    "fields": {
+      "name": "AI & Analytics",
+      "description": "Smart data-driven tools to help you make better decisions, faster.",
+      "icon": "fas fa-brain"
+    }
+  },
+  {
+    "model": "profile_company.project",
+    "fields": {
+      "title": "Custom ERP System",
+      "description": "Developed for a manufacturing company to automate inventory, billing, and HR.",
+      "image": "",
+      "link": ""
+    }
+  },
+  {
+    "model": "profile_company.project",
+    "fields": {
+      "title": "Booking App",
+      "description": "A cross-platform app for booking sports venues and receiving real-time confirmations.",
+      "image": "",
+      "link": ""
+    }
+  },
+  {
+    "model": "profile_company.project",
+    "fields": {
+      "title": "Analytics Dashboard",
+      "description": "Interactive dashboards for sales teams with real-time KPIs and performance charts.",
+      "image": "",
+      "link": ""
+    }
+  },
+  {
+    "model": "profile_company.client",
+    "fields": {
+      "name": "Mohammed Al-Saleh",
+      "title": "CEO",
+      "company": "Al-Yemen Manufacturing",
+      "testimonial": "Peakbyte delivered our ERP system on time and exceeded our expectations. Their team is responsive and highly skilled.",
+      "photo": ""
+    }
+  },
+  {
+    "model": "profile_company.client",
+    "fields": {
+      "name": "Aisha Nasser",
+      "title": "Product Manager",
+      "company": "Sportify",
+      "testimonial": "Their mobile app solution helped us grow our bookings by 40%. Highly recommended for digital transformation.",
+      "photo": ""
+    }
+  },
+  {
+    "model": "profile_company.client",
+    "fields": {
+      "name": "Khaled Al-Harazi",
+      "title": "Sales Director",
+      "company": "FastMove",
+      "testimonial": "The analytics dashboard is a game changer for our sales team. Real-time insights, beautiful UI, and great support.",
+      "photo": ""
+    }
+  }
+]
