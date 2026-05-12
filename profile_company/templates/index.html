@@ -824,6 +824,12 @@
       <p>&copy; 2026 PeakByte IT Solutions. All rights reserved.</p>
     </div>
   </div>
+  <script src="{% static 'peakbyte_chat_sdk.js' %}"></script>
+<script>
+const chat = new ChatSDK({
+    // Options are pre-configured
+});
+</script>
 </footer>
 
 <!-- Scripts -->
@@ -881,11 +887,6 @@
   });
 
 </script>
-<script src="{% static 'peakbyte_chat_sdk.js' %}"></script>
-<script>
-const chat = new ChatSDK({
-    // Options are pre-configured
-});
-</script>
+
 </body>
 </html>

@@ -2,7 +2,7 @@ class ChatSDK {
     constructor(config) {
         this.config = {
             subdomain: "peakbyte",
-            baseUrl: "http://peakbyte.peak-hc.store",
+            baseUrl: "/chat-proxy",
             wsUrl: null,
             autoOpen: false, // Default false
             position: 'right', // Default right
