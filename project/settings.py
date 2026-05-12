@@ -25,11 +25,12 @@ SECRET_KEY = 'django-insecure-o94fy9lxk6fef(zl!q@+2@k5o4bg*n6bv9s&m)*oun(31=+dd4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["peak-byte.com", "peak-byte.peak-hc.store", "peakbyte.peak-hc.store", "wapp.peak-byte.com", "localhost", "127.0.0.1", "[IP_ADDRESS]"]
+ALLOWED_HOSTS = ["peak-byte.com", "peak-byte.peak-hc.store", "peakbyte.peak-hc.store", "wapp.peak-byte.com", "localhost", "127.0.0.1", "[IP_ADDRESS]","peakbye.peak-hc.store"]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://peak-byte.com",
     "https://wapp.peak-byte.com",
+    "https://peakbyte.peak-hc.store",
     "http://peakbyte.peak-hc.store",
 ]
 
