@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import SiteDataSingleton, Project, Service, Client, FormSubmission
+import requests
+import json
 
 def index(request):
     """
@@ -15,10 +17,27 @@ def index(request):
     if request.method == 'POST':
         name = request.POST.get('name', '').strip()
         email = request.POST.get('email', '').strip()
+        subject = request.POST.get('subject', '').strip()
         message = request.POST.get('message', '').strip()
         if name and email and message:
-            FormSubmission.objects.create(name=name, email=email, message=message)
+            submission = FormSubmission.objects.create(name=name, email=email, subject=subject, message=message)
             form_message = 'Thank you for contacting us!'
+            
+            # Send WhatsApp Notification
+            try:
+                api_url = "https://wapp.peak-byte.com/api/messages/send-text/"
+                api_key = "B8fDbIwZQgnjJfqNLymrH0HfArMOae0mlSdPPyqAIdP1U47hMgRZ6bKjDdwaQJ1hZB4="
+                payload = {
+                    "phone": "967771773440",
+                    "message": f"🔔 *New Form Submission*\n\n*Name:* {name}\n*Email:* {email}\n*Subject:* {subject}\n*Message:* {message}"
+                }
+                headers = {
+                    "Content-Type": "application/json",
+                    "X-API-Key": api_key
+                }
+                requests.post(api_url, data=json.dumps(payload), headers=headers, timeout=10)
+            except Exception as e:
+                print(f"Failed to send WhatsApp notification: {e}")
         else:
             form_message = 'Please fill in all fields.'
         
