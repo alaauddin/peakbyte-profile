@@ -51,32 +51,3 @@ def index(request):
         'form_message': form_message,
     })
 
-@csrf_exempt
-def chat_proxy(request, path=""):
-    """
-    Proxies requests from the Chat SDK to the external peakbyte.peak-hc.store server
-    to avoid Mixed Content and CORS issues.
-    """
-    target_url = f"http://peakbyte.peak-hc.store/api/chat/{path}"
-    if not path.endswith('/') and not '.' in path:
-        target_url += '/'
-        
-    method = request.method
-    headers = {k: v for k, v in request.headers.items() if k.lower() not in ['host', 'content-length']}
-    
-    try:
-        if method == 'GET':
-            response = requests.get(target_url, params=request.GET, headers=headers, timeout=10)
-        elif method == 'POST':
-            response = requests.post(target_url, data=request.body, headers=headers, timeout=10)
-        else:
-            return HttpResponse(status=405)
-            
-        django_response = HttpResponse(
-            response.content,
-            status=response.status_code,
-            content_type=response.headers.get('Content-Type')
-        )
-        return django_response
-    except Exception as e:
-        return JsonResponse({"error": str(e)}, status=500)
