@@ -1,22 +1,26 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>PeakByte IT Solutions | Engineering & Technology</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="PeakByte IT Solutions is a specialized engineering and technology firm delivering high-integrity security, communication, and infrastructure systems.">
+  <meta name="description"
+    content="PeakByte IT Solutions is a specialized engineering and technology firm delivering high-integrity security, communication, and infrastructure systems.">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- Bootstrap + FontAwesome + AOS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <style>
     :root {
@@ -39,7 +43,12 @@
       scroll-behavior: smooth;
     }
 
-    h1, h2, h3, h4, h5, .navbar-brand {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    .navbar-brand {
       font-family: 'Outfit', sans-serif;
     }
 
@@ -52,10 +61,12 @@
       padding: 15px 0;
       transition: var(--transition);
     }
+
     .navbar.scrolled {
       padding: 10px 0;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
+
     .navbar-brand {
       display: flex;
       align-items: center;
@@ -64,10 +75,12 @@
       font-size: 1.5rem;
       color: var(--secondary-navy) !important;
     }
+
     .navbar-brand img {
       height: 70px;
       transition: var(--transition);
     }
+
     .nav-link {
       color: var(--secondary-navy) !important;
       font-weight: 600;
@@ -75,6 +88,7 @@
       margin: 0 10px;
       position: relative;
     }
+
     .nav-link::after {
       content: '';
       position: absolute;
@@ -85,6 +99,7 @@
       background-color: var(--primary-blue);
       transition: var(--transition);
     }
+
     .nav-link:hover::after {
       width: 100%;
     }
@@ -93,10 +108,11 @@
     .hero {
       padding: 180px 0 120px;
       background: radial-gradient(circle at top right, rgba(80, 118, 255, 0.1), transparent),
-                  radial-gradient(circle at bottom left, rgba(0, 31, 77, 0.05), transparent);
+        radial-gradient(circle at bottom left, rgba(0, 31, 77, 0.05), transparent);
       position: relative;
       overflow: hidden;
     }
+
     .hero::before {
       content: '';
       position: absolute;
@@ -109,6 +125,7 @@
       opacity: 0.15;
       z-index: -1;
     }
+
     .hero h1 {
       font-size: 4rem;
       font-weight: 900;
@@ -116,9 +133,11 @@
       color: var(--secondary-navy);
       margin-bottom: 24px;
     }
+
     .hero h1 span {
       color: var(--primary-blue);
     }
+
     .hero p {
       font-size: 1.25rem;
       color: var(--text-gray);
@@ -126,6 +145,7 @@
       margin: 0 auto 40px;
       line-height: 1.6;
     }
+
     .btn-primary {
       background-color: var(--primary-blue);
       border: none;
@@ -135,6 +155,7 @@
       box-shadow: 0 10px 25px rgba(80, 118, 255, 0.3);
       transition: var(--transition);
     }
+
     .btn-primary:hover {
       background-color: var(--secondary-navy);
       transform: translateY(-3px);
@@ -145,6 +166,7 @@
     section {
       padding: 100px 0;
     }
+
     .section-title {
       font-size: 2.75rem;
       font-weight: 800;
@@ -152,6 +174,7 @@
       margin-bottom: 20px;
       text-align: center;
     }
+
     .section-subtitle {
       color: var(--text-gray);
       text-align: center;
@@ -173,31 +196,37 @@
       display: flex;
       flex-direction: column;
     }
+
     .solution-card:hover {
       transform: translateY(-12px);
       box-shadow: 0 20px 50px rgba(0, 31, 77, 0.12);
     }
+
     .solution-img {
       width: 100%;
       height: 220px;
       object-fit: cover;
     }
+
     .solution-content {
       padding: 30px;
       flex-grow: 1;
     }
+
     .solution-card i {
       font-size: 2.5rem;
       color: var(--primary-blue);
       margin-bottom: 20px;
       display: inline-block;
     }
+
     .solution-card h5 {
       font-size: 1.35rem;
       font-weight: 700;
       margin-bottom: 15px;
       color: var(--secondary-navy);
     }
+
     .solution-card p {
       color: var(--text-gray);
       font-size: 0.95rem;
@@ -211,12 +240,14 @@
       color: #fff;
       padding: 80px 0;
     }
+
     .stat-item h2 {
       font-size: 3.5rem;
       font-weight: 800;
       margin-bottom: 10px;
       color: var(--primary-blue);
     }
+
     .stat-item p {
       font-size: 1.1rem;
       opacity: 0.8;
@@ -227,10 +258,12 @@
     .about-img-container {
       position: relative;
     }
+
     .about-img-container img {
       border-radius: 30px;
       box-shadow: var(--card-shadow);
     }
+
     .about-badge {
       position: absolute;
       bottom: -30px;
@@ -242,11 +275,13 @@
       box-shadow: 0 10px 30px rgba(80, 118, 255, 0.4);
       text-align: center;
     }
+
     .about-badge h3 {
       font-size: 2.5rem;
       font-weight: 800;
       margin: 0;
     }
+
     .about-badge p {
       font-weight: 600;
       margin: 0;
@@ -264,10 +299,12 @@
       height: 100%;
       border-left: 6px solid var(--primary-blue);
     }
+
     .value-card {
       text-align: center;
       padding: 40px;
     }
+
     .value-card i {
       font-size: 3rem;
       color: var(--primary-blue);
@@ -281,11 +318,13 @@
       padding: 50px;
       box-shadow: var(--card-shadow);
     }
+
     .contact-info-item {
       display: flex;
       gap: 20px;
       margin-bottom: 30px;
     }
+
     .contact-info-item i {
       width: 50px;
       height: 50px;
@@ -297,14 +336,17 @@
       justify-content: center;
       font-size: 1.25rem;
     }
+
     .contact-info-item h6 {
       font-weight: 700;
       margin-bottom: 5px;
     }
+
     .contact-info-item p {
       color: var(--text-gray);
       margin-bottom: 0;
     }
+
     .form-control {
       border-radius: 12px;
       padding: 15px 20px;
@@ -312,6 +354,7 @@
       margin-bottom: 20px;
       font-family: 'Inter', sans-serif;
     }
+
     .form-control:focus {
       box-shadow: 0 0 0 4px rgba(80, 118, 255, 0.1);
       border-color: var(--primary-blue);
@@ -323,36 +366,44 @@
       color: #fff;
       padding: 80px 0 40px;
     }
+
     .footer-logo {
       height: 90px;
       margin-bottom: 30px;
       filter: brightness(0) invert(1);
     }
+
     .footer-links h5 {
       font-weight: 700;
       margin-bottom: 25px;
     }
+
     .footer-links ul {
       list-style: none;
       padding: 0;
     }
+
     .footer-links li {
       margin-bottom: 12px;
     }
+
     .footer-links a {
       color: rgba(255, 255, 255, 0.6);
       text-decoration: none;
       transition: var(--transition);
     }
+
     .footer-links a:hover {
       color: var(--primary-blue);
       padding-left: 5px;
     }
+
     .social-links {
       display: flex;
       gap: 15px;
       margin-top: 25px;
     }
+
     .social-links a {
       width: 40px;
       height: 40px;
@@ -364,10 +415,12 @@
       color: #fff;
       transition: var(--transition);
     }
+
     .social-links a:hover {
       background: var(--primary-blue);
       transform: translateY(-3px);
     }
+
     .copyright {
       margin-top: 80px;
       padding-top: 30px;
@@ -379,488 +432,533 @@
 
     /* Responsive */
     @media (max-width: 991px) {
-      .hero h1 { font-size: 3rem; }
-      .about-badge { position: static; margin-top: 30px; }
-      .section-title { font-size: 2.25rem; }
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .about-badge {
+        position: static;
+        margin-top: 30px;
+      }
+
+      .section-title {
+        font-size: 2.25rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="{% static 'logo-removebg.png' %}" alt="PeakByte Logo">
-      <span>PEAKBYTE</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
-        <li class="nav-item"><a class="nav-link" href="#work">How We Work</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero" id="hero">
-  <div class="container text-center" data-aos="fade-up">
-    <h1 class="animate__animated animate__fadeInDown">Innovating <span>Security</span>, Connectivity, and <span>Integrated Systems</span></h1>
-    <p class="animate__animated animate__fadeInUp">Bridging the gap between complex industrial requirements and modern IP-based technological innovations.</p>
-    <div class="animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
-      <a href="#contact" class="btn btn-primary">Request a Consultation</a>
-      <a href="{% static 'peakbyte_profile.pdf' %}" class="btn btn-outline-primary ms-3" style="border-radius: 50px; padding: 16px 40px; font-weight: 700;" download>
-        <i class="fas fa-file-download me-2"></i> Download Profile
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'logo-removebg.png' %}" alt="PeakByte Logo">
+        <span>PEAKBYTE</span>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- Stats Section -->
-<section class="stats-section">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up">
-        <div class="stat-item">
-          <h2 id="stat-years">0</h2>
-          <p>Years of Technical Expertise</p>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
-        <div class="stat-item">
-          <h2>Master's</h2>
-          <p>Level Engineering Foundation</p>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="stat-item">
-          <h2 id="stat-cert">0</h2>
-          <p>Bosch IP-CCTV Certified Since</p>
-        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">How We Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- About Section -->
-<section id="about">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-        <div class="about-img-container">
-          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1000" alt="Engineering" class="img-fluid">
-          <div class="about-badge">
-            <h3 id="stat-projects">0</h3>
-            <p>Projects Delivered</p>
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container text-center" data-aos="fade-up">
+      <h1 class="animate__animated animate__fadeInDown">Innovating <span>Security</span>, Connectivity, and
+        <span>Integrated Systems</span></h1>
+      <p class="animate__animated animate__fadeInUp">Bridging the gap between complex industrial requirements and modern
+        IP-based technological innovations.</p>
+      <div class="animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+        <a href="#contact" class="btn btn-primary">Request a Consultation</a>
+        <a href="{% static 'peakbyte_profile.pdf' %}" class="btn btn-outline-primary ms-3"
+          style="border-radius: 50px; padding: 16px 40px; font-weight: 700;" download>
+          <i class="fas fa-file-download me-2"></i> Download Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up">
+          <div class="stat-item">
+            <h2 id="stat-years">0</h2>
+            <p>Years of Technical Expertise</p>
           </div>
         </div>
-      </div>
-      <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
-        <h2 class="section-title text-start">About PeakByte IT Solutions</h2>
-        <p class="lead mb-4">A specialized engineering and technology firm dedicated to delivering high-integrity security, communication, and infrastructure systems.</p>
-        <p class="text-gray mb-4">With a core foundation built on over two decades of technical expertise and a Master’s level command of Telecommunication and Control Engineering, we provide robust solutions that safeguard assets and optimize operational efficiency.</p>
-        
-        <h4 class="mt-5 mb-3">Our Vision</h4>
-        <p class="text-gray">To be the leading regional integrator of intelligent security and communication infrastructure, recognized for setting the benchmark in engineering excellence and technological innovation.</p>
-        
-        <div class="mt-5">
-          <div class="d-flex align-items-center gap-3 mb-3">
-            <i class="fas fa-check-circle text-primary fs-4"></i>
-            <span class="fw-bold">Rigorous International Standards</span>
+        <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-item">
+            <h2>Master's</h2>
+            <p>Level Engineering Foundation</p>
           </div>
-          <div class="d-flex align-items-center gap-3">
-            <i class="fas fa-check-circle text-primary fs-4"></i>
-            <span class="fw-bold">Modern IP-based Innovations</span>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-item">
+            <h2 id="stat-cert">0</h2>
+            <p>Bosch IP-CCTV Certified Since</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Core Solutions Section -->
-<section id="solutions" class="bg-white">
-  <div class="container">
-    <h2 class="section-title">Our Core Solutions</h2>
-    <p class="section-subtitle">We serve a diverse clientele across the commercial, industrial, and public sectors, ensuring every project meets safety and performance standards.</p>
-    
-    <div class="row g-4">
-      <!-- Solution 1 -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-        <div class="solution-card">
-          <img src="{% static 'images/server_room.png' %}" alt="Networking" class="solution-img">
-          <div class="solution-content">
-            <i class="fas fa-network-wired"></i>
-            <h5>IP Networking & Server Room</h5>
-            <p>Complete design and implementation of enterprise network architectures, structured cabling, and mission-critical server room environments.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Solution 2 -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-        <div class="solution-card">
-          <img src="{% static 'images/fiber_optics.png' %}" alt="Fiber" class="solution-img">
-          <div class="solution-content">
-            <i class="fas fa-project-diagram"></i>
-            <h5>Fiber Optic Networks</h5>
-            <p>High-speed fiber optic backbone installation, precision splicing, and termination for high-bandwidth communication infrastructure.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Solution 3 -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-        <div class="solution-card">
-          <img src="{% static 'images/cctv.png' %}" alt="CCTV" class="solution-img">
-          <div class="solution-content">
-            <i class="fas fa-video"></i>
-            <h5>CCTV & Advanced Surveillance</h5>
-            <p>Enterprise-grade IP-CCTV solutions featuring AI-driven analytics, remote monitoring, and high-resolution video management systems.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Solution 4 -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-        <div class="solution-card">
-          <img src="{% static 'images/access.png' %}" alt="Access Control" class="solution-img">
-          <div class="solution-content">
-            <i class="fas fa-id-card-clip"></i>
-            <h5>Access Control Systems</h5>
-            <p>Integrated entry management including biometric authentication, RFID technology, and smart-gate control systems.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Solution 5 -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-        <div class="solution-card">
-          <img src="{% static 'images/pa.png' %}" alt="PA Systems" class="solution-img">
-          <div class="solution-content">
-            <i class="fas fa-bullhorn"></i>
-            <h5>Public Address & IP-PA Systems</h5>
-            <p>Sophisticated IP-based public address and emergency voice evacuation systems designed for clear communication in large-scale facilities.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Solution 6 -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-        <div class="solution-card">
-          <img src="{% static 'images/fire.png' %}" alt="Fire Alarm" class="solution-img">
-          <div class="solution-content">
-            <i class="fas fa-fire-extinguisher"></i>
-            <h5>Fire Alarm & Life Safety</h5>
-            <p>Intelligent fire detection and alarm systems engineered to provide rapid response and maximum protection.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Solution 7 -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-        <div class="solution-card">
-          <img src="{% static 'images/conference.png' %}" alt="AV" class="solution-img">
-          <div class="solution-content">
-            <i class="fas fa-users-viewfinder"></i>
-            <h5>Conference Rooms & Audiovisual</h5>
-            <p>Modern AV solutions for boardrooms and training centers, including integrated video conferencing and high-fidelity sound.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Solution 8 -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-        <div class="solution-card">
-          <img src="{% static 'images/queue.png' %}" alt="Queue Management" class="solution-img">
-          <div class="solution-content">
-            <i class="fas fa-users-rectangle"></i>
-            <h5>Queue & Customer Service (CCS)</h5>
-            <p>Automated queue management and customer flow systems (CCS) designed to enhance service quality and operational throughput.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Solution 9 -->
-      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-        <div class="solution-card">
-          <img src="{% static 'images/software.png' %}" alt="Software Integration" class="solution-img">
-          <div class="solution-content">
-            <i class="fas fa-code-merge"></i>
-            <h5>Software & Integration Solutions</h5>
-            <p>Custom software development and multi-system integration to ensure a seamless interface between security hardware and business workflows.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Why Choose Us Section -->
-<section id="why-choose-us" class="bg-white">
-  <div class="container">
-    <h2 class="section-title">Why PeakByte IT Solutions?</h2>
-    <p class="section-subtitle">Delivering excellence through decades of specialized experience and engineering precision.</p>
-    
-    <div class="row g-4 mt-2">
-      <div class="col-lg-3 col-md-6" data-aos="fade-up">
-        <div class="text-center p-4">
-          <i class="fas fa-history text-primary mb-3" style="font-size: 3rem;"></i>
-          <h5 class="fw-bold">Decades of Expertise</h5>
-          <p class="text-gray">Built on 20+ years of specialized experience in integrated security and communication systems.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-        <div class="text-center p-4">
-          <i class="fas fa-user-check text-primary mb-3" style="font-size: 3rem;"></i>
-          <h5 class="fw-bold">Certified Proficiency</h5>
-          <p class="text-gray">Professional certification in industry-leading platforms, including Bosch IP-CCTV since 2008.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="text-center p-4">
-          <i class="fas fa-graduation-cap text-primary mb-3" style="font-size: 3rem;"></i>
-          <h5 class="fw-bold">Master's Level Design</h5>
-          <p class="text-gray">System designs rooted in advanced Telecommunication and Control Engineering principles.</p>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-        <div class="text-center p-4">
-          <i class="fas fa-map-location-dot text-primary mb-3" style="font-size: 3rem;"></i>
-          <h5 class="fw-bold">Regional Insight</h5>
-          <p class="text-gray">Our office in Aden provides a deep understanding of local infrastructure challenges and requirements.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- How We Work Section -->
-<section id="work">
-  <div class="container">
-    <h2 class="section-title">How We Work</h2>
-    <p class="section-subtitle">Our engineering approach ensures precision and long-term reliability for every project.</p>
-    
-    <div class="row g-4">
-      <div class="col-lg-4" data-aos="fade-up">
-        <div class="work-item">
-          <div class="h4 fw-bold mb-3">01. Strategic Consultancy</div>
-          <p class="text-gray">Utilizing advanced Telecommunication and Control Engineering principles to assess and design bespoke system architectures.</p>
-        </div>
-      </div>
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="work-item">
-          <div class="h4 fw-bold mb-3">02. Precision Execution</div>
-          <p class="text-gray">Ensuring high-performance results through professional installation, including precision fiber splicing and seamless software integration.</p>
-        </div>
-      </div>
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="work-item">
-          <div class="h4 fw-bold mb-3">03. Turnkey Management</div>
-          <p class="text-gray">Providing a single point of accountability from initial site survey and design through to commissioning and long-term maintenance.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Values Section -->
-<section id="values" class="bg-white">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4" data-aos="fade-up">
-        <div class="value-card">
-          <i class="fas fa-microchip"></i>
-          <h4>Engineering Integrity</h4>
-          <p class="text-gray">Grounded in a Master’s level engineering foundation and over 20 years of field experience.</p>
-        </div>
-      </div>
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="value-card">
-          <i class="fas fa-award"></i>
-          <h4>Technical Excellence</h4>
-          <p class="text-gray">Maintaining professional certifications in global industry-leading platforms, such as Bosch IP-CCTV.</p>
-        </div>
-      </div>
-      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="value-card">
-          <i class="fas fa-lightbulb"></i>
-          <h4>Future-Ready Innovation</h4>
-          <p class="text-gray">Bridging the gap between legacy industrial requirements and modern, scalable IP-based advancements.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<style>
-  .partner-logo:hover {
-    filter: grayscale(0%) !important;
-    opacity: 1 !important;
-    transform: scale(1.1);
-  }
-</style>
-
-<!-- Contact Section -->
-<section id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
-        <h2 class="section-title text-start">Get In Touch</h2>
-        <p class="text-gray mb-5">Have a project in mind? Our team of experts is ready to help you design and implement the perfect solution.</p>
-        
-        <div class="contact-info-item">
-          <i class="fas fa-phone"></i>
-          <div>
-            <h6>Phone</h6>
-            <p>+967 771773440</p>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <h6>Email</h6>
-            <p>info@peak-byte.com</p>
-          </div>
-        </div>
-        <div class="contact-info-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <h6>Location</h6>
-            <p>Aden, Yemen</p>
-          </div>
-        </div>
-        
-        <div class="social-links mt-5">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <div class="col-lg-7" data-aos="fade-left">
-        <div class="contact-card">
-          <form id="contactForm" method="post" action="#contact">
-            {% csrf_token %}
-            {% if form_message %}<div class="alert alert-success">{{ form_message }}</div>{% endif %}
-            <div class="row">
-              <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="col-md-6">
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-              </div>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+          <div class="about-img-container">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1000"
+              alt="Engineering" class="img-fluid">
+            <div class="about-badge">
+              <h3 id="stat-projects">0</h3>
+              <p>Projects Delivered</p>
             </div>
-            <input type="text" name="subject" class="form-control" placeholder="Subject">
-            <textarea name="message" class="form-control" rows="5" placeholder="Tell us about your project..." required></textarea>
-            <button type="submit" class="btn btn-primary w-100 py-3 mt-2">Send Message</button>
-          </form>
+          </div>
+        </div>
+        <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+          <h2 class="section-title text-start">About PeakByte IT Solutions</h2>
+          <p class="lead mb-4">A specialized engineering and technology firm dedicated to delivering high-integrity
+            security, communication, and infrastructure systems.</p>
+          <p class="text-gray mb-4">With a core foundation built on over two decades of technical expertise and a
+            Master’s level command of Telecommunication and Control Engineering, we provide robust solutions that
+            safeguard assets and optimize operational efficiency.</p>
+
+          <h4 class="mt-5 mb-3">Our Vision</h4>
+          <p class="text-gray">To be the leading regional integrator of intelligent security and communication
+            infrastructure, recognized for setting the benchmark in engineering excellence and technological innovation.
+          </p>
+
+          <div class="mt-5">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <i class="fas fa-check-circle text-primary fs-4"></i>
+              <span class="fw-bold">Rigorous International Standards</span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <i class="fas fa-check-circle text-primary fs-4"></i>
+              <span class="fw-bold">Modern IP-based Innovations</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 mb-5 mb-lg-0">
-        <img src="{% static 'logo-removebg.png' %}" alt="PeakByte Logo" class="footer-logo">
-        <p style="color: rgba(255,255,255,0.6); line-height: 1.8;">Setting the benchmark in engineering excellence and technological innovation across the region.</p>
-        
-      </div>
-      <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
-        <h5>Quick Links</h5>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-4 mb-4 mb-md-0 footer-links">
-        <h5>Our Solutions</h5>
-        <ul>
-          <li><a href="#">IP Networking</a></li>
-          <li><a href="#">CCTV Surveillance</a></li>
-          <li><a href="#">Fiber Optics</a></li>
-          <li><a href="#">Access Control</a></li>
-        </ul>
-      </div>
-      <div class="col-lg-3 col-md-4 footer-links">
-        <h5>Contact Us</h5>
-        <p style="color: rgba(255,255,255,0.6);">Aden, Yemen<br>+967 771773440<br>info@peak-byte.com</p>
+  <!-- Core Solutions Section -->
+  <section id="solutions" class="bg-white">
+    <div class="container">
+      <h2 class="section-title">Our Core Solutions</h2>
+      <p class="section-subtitle">We serve a diverse clientele across the commercial, industrial, and public sectors,
+        ensuring every project meets safety and performance standards.</p>
+
+      <div class="row g-4">
+        <!-- Solution 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="solution-card">
+            <img src="{% static 'images/server_room.png' %}" alt="Networking" class="solution-img">
+            <div class="solution-content">
+              <i class="fas fa-network-wired"></i>
+              <h5>IP Networking & Server Room</h5>
+              <p>Complete design and implementation of enterprise network architectures, structured cabling, and
+                mission-critical server room environments.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Solution 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="solution-card">
+            <img src="{% static 'images/fiber_optics.png' %}" alt="Fiber" class="solution-img">
+            <div class="solution-content">
+              <i class="fas fa-project-diagram"></i>
+              <h5>Fiber Optic Networks</h5>
+              <p>High-speed fiber optic backbone installation, precision splicing, and termination for high-bandwidth
+                communication infrastructure.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Solution 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="solution-card">
+            <img src="{% static 'images/cctv.png' %}" alt="CCTV" class="solution-img">
+            <div class="solution-content">
+              <i class="fas fa-video"></i>
+              <h5>CCTV & Advanced Surveillance</h5>
+              <p>Enterprise-grade IP-CCTV solutions featuring AI-driven analytics, remote monitoring, and
+                high-resolution video management systems.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Solution 4 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="solution-card">
+            <img src="{% static 'images/access.png' %}" alt="Access Control" class="solution-img">
+            <div class="solution-content">
+              <i class="fas fa-id-card-clip"></i>
+              <h5>Access Control Systems</h5>
+              <p>Integrated entry management including biometric authentication, RFID technology, and smart-gate control
+                systems.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Solution 5 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="solution-card">
+            <img src="{% static 'images/pa.png' %}" alt="PA Systems" class="solution-img">
+            <div class="solution-content">
+              <i class="fas fa-bullhorn"></i>
+              <h5>Public Address & IP-PA Systems</h5>
+              <p>Sophisticated IP-based public address and emergency voice evacuation systems designed for clear
+                communication in large-scale facilities.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Solution 6 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="solution-card">
+            <img src="{% static 'images/fire.png' %}" alt="Fire Alarm" class="solution-img">
+            <div class="solution-content">
+              <i class="fas fa-fire-extinguisher"></i>
+              <h5>Fire Alarm & Life Safety</h5>
+              <p>Intelligent fire detection and alarm systems engineered to provide rapid response and maximum
+                protection.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Solution 7 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="solution-card">
+            <img src="{% static 'images/conference.png' %}" alt="AV" class="solution-img">
+            <div class="solution-content">
+              <i class="fas fa-users-viewfinder"></i>
+              <h5>Conference Rooms & Audiovisual</h5>
+              <p>Modern AV solutions for boardrooms and training centers, including integrated video conferencing and
+                high-fidelity sound.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Solution 8 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="solution-card">
+            <img src="{% static 'images/queue.png' %}" alt="Queue Management" class="solution-img">
+            <div class="solution-content">
+              <i class="fas fa-users-rectangle"></i>
+              <h5>Queue & Customer Service (CCS)</h5>
+              <p>Automated queue management and customer flow systems (CCS) designed to enhance service quality and
+                operational throughput.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Solution 9 -->
+        <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="solution-card">
+            <img src="{% static 'images/software.png' %}" alt="Software Integration" class="solution-img">
+            <div class="solution-content">
+              <i class="fas fa-code-merge"></i>
+              <h5>Software & Integration Solutions</h5>
+              <p>Custom software development and multi-system integration to ensure a seamless interface between
+                security hardware and business workflows.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="copyright">
-      <p>&copy; 2026 PeakByte IT Solutions. All rights reserved.</p>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-choose-us" class="bg-white">
+    <div class="container">
+      <h2 class="section-title">Why PeakByte IT Solutions?</h2>
+      <p class="section-subtitle">Delivering excellence through decades of specialized experience and engineering
+        precision.</p>
+
+      <div class="row g-4 mt-2">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
+          <div class="text-center p-4">
+            <i class="fas fa-history text-primary mb-3" style="font-size: 3rem;"></i>
+            <h5 class="fw-bold">Decades of Expertise</h5>
+            <p class="text-gray">Built on 20+ years of specialized experience in integrated security and communication
+              systems.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="text-center p-4">
+            <i class="fas fa-user-check text-primary mb-3" style="font-size: 3rem;"></i>
+            <h5 class="fw-bold">Certified Proficiency</h5>
+            <p class="text-gray">Professional certification in industry-leading platforms, including Bosch IP-CCTV since
+              2008.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="text-center p-4">
+            <i class="fas fa-graduation-cap text-primary mb-3" style="font-size: 3rem;"></i>
+            <h5 class="fw-bold">Master's Level Design</h5>
+            <p class="text-gray">System designs rooted in advanced Telecommunication and Control Engineering principles.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="text-center p-4">
+            <i class="fas fa-map-location-dot text-primary mb-3" style="font-size: 3rem;"></i>
+            <h5 class="fw-bold">Regional Insight</h5>
+            <p class="text-gray">Our office in Aden provides a deep understanding of local infrastructure challenges and
+              requirements.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-<script src="https://peakbyte.peak-hc.store/static/js/chat-sdk.js"></script>
-<script>
-const chat = new ChatSDK({
-    // Options are pre-configured
-});
-</script>
-</footer>
+  </section>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-  });
+  <!-- How We Work Section -->
+  <section id="work">
+    <div class="container">
+      <h2 class="section-title">How We Work</h2>
+      <p class="section-subtitle">Our engineering approach ensures precision and long-term reliability for every
+        project.</p>
 
-  // Navbar background change on scroll
-  window.addEventListener('scroll', function() {
-    const nav = document.getElementById('mainNav');
-    if (window.scrollY > 50) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
+      <div class="row g-4">
+        <div class="col-lg-4" data-aos="fade-up">
+          <div class="work-item">
+            <div class="h4 fw-bold mb-3">01. Strategic Consultancy</div>
+            <p class="text-gray">Utilizing advanced Telecommunication and Control Engineering principles to assess and
+              design bespoke system architectures.</p>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="work-item">
+            <div class="h4 fw-bold mb-3">02. Precision Execution</div>
+            <p class="text-gray">Ensuring high-performance results through professional installation, including
+              precision fiber splicing and seamless software integration.</p>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="work-item">
+            <div class="h4 fw-bold mb-3">03. Turnkey Management</div>
+            <p class="text-gray">Providing a single point of accountability from initial site survey and design through
+              to commissioning and long-term maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section id="values" class="bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-up">
+          <div class="value-card">
+            <i class="fas fa-microchip"></i>
+            <h4>Engineering Integrity</h4>
+            <p class="text-gray">Grounded in a Master’s level engineering foundation and over 20 years of field
+              experience.</p>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-card">
+            <i class="fas fa-award"></i>
+            <h4>Technical Excellence</h4>
+            <p class="text-gray">Maintaining professional certifications in global industry-leading platforms, such as
+              Bosch IP-CCTV.</p>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-card">
+            <i class="fas fa-lightbulb"></i>
+            <h4>Future-Ready Innovation</h4>
+            <p class="text-gray">Bridging the gap between legacy industrial requirements and modern, scalable IP-based
+              advancements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <style>
+    .partner-logo:hover {
+      filter: grayscale(0%) !important;
+      opacity: 1 !important;
+      transform: scale(1.1);
     }
-  });
+  </style>
 
-  // Animated Counters
-  function animateCounter(id, target, duration, startVal = 0) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    
-    let start = startVal;
-    const increment = (target - startVal) / (duration / 16);
-    
-    function update() {
-      start += increment;
-      if (start >= target) {
-        el.textContent = target;
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+          <h2 class="section-title text-start">Get In Touch</h2>
+          <p class="text-gray mb-5">Have a project in mind? Our team of experts is ready to help you design and
+            implement the perfect solution.</p>
+
+          <div class="contact-info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h6>Phone</h6>
+              <p>+967 771773440</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h6>Email</h6>
+              <p>info@peak-byte.com</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h6>Location</h6>
+              <p>Aden, Yemen</p>
+            </div>
+          </div>
+
+          <div class="social-links mt-5">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="contact-card">
+            <form id="contactForm" method="post" action="#contact">
+              {% csrf_token %}
+              {% if form_message %}<div class="alert alert-success">{{ form_message }}</div>{% endif %}
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+              </div>
+              <input type="text" name="subject" class="form-control" placeholder="Subject">
+              <textarea name="message" class="form-control" rows="5" placeholder="Tell us about your project..."
+                required></textarea>
+              <button type="submit" class="btn btn-primary w-100 py-3 mt-2">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <img src="{% static 'logo-removebg.png' %}" alt="PeakByte Logo" class="footer-logo">
+          <p style="color: rgba(255,255,255,0.6); line-height: 1.8;">Setting the benchmark in engineering excellence and
+            technological innovation across the region.</p>
+
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4 mb-md-0 footer-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-0 footer-links">
+          <h5>Our Solutions</h5>
+          <ul>
+            <li><a href="#">IP Networking</a></li>
+            <li><a href="#">CCTV Surveillance</a></li>
+            <li><a href="#">Fiber Optics</a></li>
+            <li><a href="#">Access Control</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 footer-links">
+          <h5>Contact Us</h5>
+          <p style="color: rgba(255,255,255,0.6);">Aden, Yemen<br>+967 771773440<br>info@peak-byte.com</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 PeakByte IT Solutions. All rights reserved.</p>
+      </div>
+    </div>
+    <script src="https://peakbyte.raddadoman.com/static/js/chat-sdk.js"></script>
+    <script>
+      const chat = new ChatSDK({
+        // Options are pre-configured
+      });
+    </script>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
+
+    // Navbar background change on scroll
+    window.addEventListener('scroll', function () {
+      const nav = document.getElementById('mainNav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
       } else {
-        el.textContent = Math.floor(start);
-        requestAnimationFrame(update);
-      }
-    }
-    
-    // Trigger animation when visible
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        update();
-        observer.unobserve(el);
+        nav.classList.remove('scrolled');
       }
     });
-    observer.observe(el);
-  }
 
-  window.addEventListener('DOMContentLoaded', function() {
-    animateCounter('stat-years', 20, 2000);
-    animateCounter('stat-cert', 2008, 2000, 1990);
-    animateCounter('stat-projects', 46, 2000);
-  });
+    // Animated Counters
+    function animateCounter(id, target, duration, startVal = 0) {
+      const el = document.getElementById(id);
+      if (!el) return;
 
-</script>
+      let start = startVal;
+      const increment = (target - startVal) / (duration / 16);
+
+      function update() {
+        start += increment;
+        if (start >= target) {
+          el.textContent = target;
+        } else {
+          el.textContent = Math.floor(start);
+          requestAnimationFrame(update);
+        }
+      }
+
+      // Trigger animation when visible
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          update();
+          observer.unobserve(el);
+        }
+      });
+      observer.observe(el);
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+      animateCounter('stat-years', 20, 2000);
+      animateCounter('stat-cert', 2008, 2000, 1990);
+      animateCounter('stat-projects', 46, 2000);
+    });
+
+  </script>
 
 </body>
+
 </html>
